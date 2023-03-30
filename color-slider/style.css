@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: monospace;
+}
+body,
+.back {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: rgb(234, 145, 120); */
+}
+
+header {
+  width: 100vw;
+  height: auto;
+  background: yellow;
+  display: flex;
+  align-content: center;
+  padding: 2rem 0rem 2rem 0rem;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 30px 10px rgba(43, 42, 42, 0.4),
+    0px 0px 40px 50px rgba(68, 67, 67, 0.1);
+}
+label,
+p {
+  color: black;
+}
+
+label {
+  padding-left: 2rem;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#range_slider {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+/*---------------------------------*/
+.slider {
+  /* appearance: none; */
+  cursor: pointer;
+  /* outline: none; */
+}
+
+/*---------------------------------*/
+.color_value_main {
+  display: inline-flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+
+  text-align: center;
+  padding-right: 2rem;
+  font-size: 2.2rem;
+}
+/*--------------------------------------------*/
+input[type="range"] {
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+.slider {
+  appearance: none;
+  width: 150px;
+  background: transparent;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  height: 25px;
+  width: 15px;
+  border-radius: 2rem;
+
+  cursor: pointer;
+  margin-top: -11px;
+}
+
+#red::-webkit-slider-thumb {
+  background: #b22222;
+}
+#green::-webkit-slider-thumb {
+  background: #2e8b57;
+}
+#blue::-webkit-slider-thumb {
+  background: #1e90ff;
+}
+
+.slider:focus {
+  outline: none;
+}
+
+.slider::-webkit-slider-runnable-track {
+  width: 150px;
+  height: 2px;
+  cursor: pointer;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+
+  /* border: 3px solid rgba(255, 255, 255, 0.4); */
+}
+
+#red:active::-webkit-slider-thumb {
+  background: #8b0000;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+#green:active::-webkit-slider-thumb {
+  background: #006400;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+#blue:active::-webkit-slider-thumb {
+  background: #0000cd;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    display: grid;
+    place-content: center;
+  }
+  .range_slider {
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+  }
+  .color_value_main {
+    padding-top: 4rem;
+    display: inline-flex;
+  }
+}
