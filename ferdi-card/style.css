@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 18px;
+
+  font-family: "Roboto", sans-serif;
+
+  --color-bg-body: #e8eaec;
+  --color-bg-content: #ffffff;
+  --color-online: #209a54;
+  --color-txt: #000000;
+  --bkg-dark: #212529;
+  --bootcamp-color: #6a1cc3;
+  --color-blue: #4682b4;
+  --color-discord: #48494e;
+  --color-graydark: #696969;
+  --color-lightgrey: #adb5bd;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: olive;
+  background: linear-gradient(var(--bootcamp-color) 30%, #ff8fab);
+}
+.wrapper {
+  background: linear-gradient(
+    180deg,
+    var(--bkg-dark) 0px 14%,
+    var(--color-bg-body) 14%
+  );
+  padding: max(1.5vw, 1rem);
+  border-radius: 1rem;
+}
+
+span:has(p) {
+  font-weight: 400;
+  color: var(--color-graydark);
+}
+
+.name {
+  border-bottom: 2px solid var(--color-bg-body);
+  position: relative;
+}
+/*-----maintitles----------*/
+h3 {
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  font-size: 1rem;
+  padding: 0.8rem 0 0.8rem 0;
+  text-transform: uppercase;
+  color: var(--color-txt);
+}
+
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*--------------------Blitz----------------------------------*/
+.lightning_mcFerdi::before {
+  content: "";
+
+  display: block;
+  background: #fb5607;
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  top: 10px;
+  left: 65px;
+  clip-path: polygon(100% 0%, 30% 50%, 100% 50%, 30% 100%, 80% 30%);
+}
+
+.lightning_mcFerdi::after {
+  content: "";
+
+  display: block;
+  background: #ffbe0b;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 11px;
+
+  left: 70px;
+
+  clip-path: polygon(100% 0%, 30% 50%, 100% 50%, 30% 100%, 80% 30%);
+}
+/*---------------------Blitz-End------------------------------------*/
+/*-------------------------------------------------------------*/
+/*--------------------Name----------------------------------*/
+.main_name {
+  font-size: 1.7rem;
+  padding: 0.6rem 0 0.1rem 0;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  color: var(--color-txt);
+  position: relative;
+}
+.user_name {
+  font-weight: 500;
+  padding-bottom: 1.4rem;
+  color: var(--color-graydark);
+}
+
+/*--------------------PName end--------------------------------*/
+/*----------------------------------------------------------------*/
+/*--------------------Profilphot---------------------------------*/
+
+.pic,
+.status {
+  border: 0.7rem solid var(--color-bg-body);
+  border-radius: 100%;
+}
+
+.pic {
+  position: relative;
+  width: 7.5rem;
+  height: 7.5rem;
+  background-image: url("https://fastly.picsum.photos/id/866/200/200.jpg?hmac=i0ngmQOk9dRZEzhEosP31m_vQnKBQ9C19TBP1CGoIUA");
+  background-size: contain;
+  background-repeat: repeat;
+}
+.status {
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  background: var(--color-online);
+  width: 2.8rem;
+  height: 2.8em;
+}
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------Content------------------------------*/
+
+.content_box {
+  display: flex;
+  flex-direction: column;
+
+  background: var(--color-bg-content);
+  padding-left: max(2vw, 1rem);
+  padding-right: max(2vw, 1rem);
+
+  height: auto;
+  min-width: 300px;
+  max-width: 30vw;
+
+  inset: 2rem;
+  border-radius: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.member {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.holder_all {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.holder_first_element,
+holder_third_element {
+  display: inline-flex;
+  align-items: center;
+}
+.logo_pic {
+  width: 30px;
+  height: 30px;
+
+  margin-right: 0.4rem;
+  display: grid;
+  place-content: center;
+}
+/*-------------Discord-log----------------------*/
+.logo_pic > svg {
+  fill: var(--color-discord);
+}
+/*------------Discord Logo ende---------------------*/
+.member_point {
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: var(--color-lightgrey);
+  border-radius: 100%;
+}
+.bootcamp {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: var(--bootcamp-color);
+  border-radius: 100%;
+}
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+/*----------------Rollen-------------------------------*/
+.role_boxes {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.role_box {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-bg-body);
+  padding: 0.2rem 0.2rem 0.2rem 0.3rem;
+  border-radius: 0.4rem;
+}
+.description {
+  font-weight: 500;
+  color: (--color-discord);
+  font-size: 0.9rem;
+  padding-right: 0.4rem;
+}
+.point {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin: 0.3rem;
+}
+
+.team {
+  background: var(--bootcamp-color);
+}
+.trainers,
+.teaching {
+  background: var(--color-blue);
+}
+.assesment {
+  background: var(--color-lightgrey);
+}
+
+.add_more {
+  padding: 0 0.5rem 0 0.5rem;
+  font-size: 1.7rem;
+  color: var(--color-graydark);
+}
+/*-------------------Rollen Ende------------------------------*/
+/*----------------------------------------------------*/
+/*---------------Notiz-------------------------------*/
+
+.notice {
+  margin-top: 1rem;
+}
+
+#notice-field {
+  all: unset;
+  width: 100%;
+  font-weight: 500;
+  color: var(--color-lightgrey);
+  font-size: 0.9rem;
+  padding: 0.3rem 0.3rem 3rem 0.3rem;
+}
