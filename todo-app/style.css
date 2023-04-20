@@ -1,0 +1,315 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+:root {
+  font-family: "Quicksand", sans-serif;
+  width: 100vw;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    #4d908e 20%,
+    #43aa8b 40%,
+    #52b69a 60%,
+    #99d98c 90%,
+    #d9ed92 100%
+  );
+
+  /* background-size: cover; */
+}
+
+/*===============================================================*/
+/*                    Header                          */
+/*===============================================================*/
+.todo_wrapper {
+  width: clamp(20rem, 50vw, 40vw);
+  margin: 2rem 0 0 0;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+#add_button_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3.5rem calc(0.5rem + 1vw) 4rem calc(0.5rem + 1vw);
+  border-radius: 2rem 2rem 0 0;
+}
+/*===============================================================*/
+/*                   Input Field                    */
+/*===============================================================*/
+.input-field {
+  all: unset;
+  cursor: pointer;
+  background: white;
+  border-radius: 2rem;
+  border: 4px solid transparent;
+  padding: 0.8rem 0.1rem 0.8rem 1rem;
+  width: 65%;
+}
+.input-field:hover {
+  border: 4px solid #99d98c;
+}
+.input-field:focus {
+  border: 4px solid #4d908e;
+}
+/*===============================================================*/
+/*                  Button                    */
+/*===============================================================*/
+.add-button {
+  all: unset;
+  cursor: pointer;
+  background: #99d98c;
+  width: 25%;
+  padding: 1rem 0 1rem 0;
+  border-radius: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  outline: #99d98c solid 4px;
+  outline-offset: 0.3rem;
+}
+.add-button:hover {
+  outline: #d9ed92 solid 4px;
+  color: #43aa8b;
+  background: #d9ed92;
+}
+.add-button:active {
+  background: #d9ed92;
+}
+/*=========================================================================================*/
+/*                      List-Element                              */
+/*=========================================================================================*/
+
+li:nth-of-type(odd) {
+  background: #faf3dd;
+}
+li:nth-of-type(even) {
+  background: #d6ccc2;
+}
+
+li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: calc(2rem + 2vh);
+  font-size: 1.3rem;
+  list-style: none;
+  border-radius: 5rem 0 0 5rem;
+
+  margin: 0.5rem 0 0.5rem 0rem;
+
+  /* z-index: 10; */
+}
+
+li > input[type="checkbox"] {
+  cursor: pointer;
+  all: unset;
+
+  display: block;
+  border-radius: 5rem 0 0 5rem;
+  margin: 0 1.4rem 0 0;
+  background: #d90429;
+  height: 100%;
+  width: 8%;
+}
+/*============================================================*/
+/*               List-Element    Checkbox          */
+/*===========================================================*/
+input[type="checkbox"]::before {
+  cursor: pointer;
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 5rem 0 0 5rem;
+
+  height: 100%;
+  width: 100%;
+}
+
+li > input[type="checkbox"]:checked {
+  background: #90be6d;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+/*=========================================================================================*/
+/*                      Filter and Options                             */
+/*=========================================================================================*/
+
+.filter_and_option {
+  background: #faf3dd;
+  margin: 2rem 0 1.2rem 0;
+  display: inline-block;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+  /* border-radius: 0 0 1rem 1rem; */
+}
+
+#filter_and_options {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 1.5rem 1rem;
+  align-content: center;
+  margin: 1rem 0rem 0;
+
+  justify-content: space-between;
+}
+
+.section_title {
+  padding: 1rem 2.5rem 0;
+}
+h1 {
+  font-size: 1.4rem;
+}
+h2 {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.todo_title {
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 0 0.5rem 0;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.radio-wrapper {
+  flex-grow: 2;
+}
+
+.button-wrapper {
+  display: inline-flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+/*=========================================================================================*/
+/*                      Radios                             */
+/*=========================================================================================*/
+
+.delete-btn {
+  all: unset;
+  cursor: pointer;
+  background: #99d98c;
+  width: 75%;
+
+  padding: 1rem 0 1rem 0;
+  border-radius: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #d9ed92;
+  color: #43aa8b;
+}
+.delete-btn:active {
+  background: #43aa8b;
+}
+/*=========================================================================================*/
+/*                      Radios                             */
+/*=========================================================================================*/
+.radios label {
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding: 2rem;
+}
+#all {
+  border: 2px solid rgba(0, 0, 0, 0.7);
+}
+#done {
+  border: 2px solid #d90429;
+}
+#open {
+  border: 2px solid #99d98c;
+}
+
+input[type="radio"] {
+  all: unset;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin: 0 0.5rem 0 0;
+}
+
+/* input[type="radio"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 15px;
+  height: 15px;
+  background: red;
+  border-radius: 100%;
+  scale: 1;
+} */
+
+#all:checked {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#done:checked {
+  background: #d90429;
+}
+
+#open:checked {
+  background: #99d98c;
+}
+
+.radios {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1rem 0;
+}
+.radios > label {
+  text-align: center;
+  margin: 0 0 0 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0 0 0 0;
+}
+
+/*========================================*/
+
+footer {
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 2rem 2rem;
+  margin: 2rem 0 0 0;
+}

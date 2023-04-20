@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo App</title>
+</head>
+
+<body>
+
+    <section class="todo_wrapper">
+
+        <header>
+            <form id="add_button_form">
+                <input type="text" name="" id="listInput" class="input-field" placeholder="Tippe ein...">
+                <button class="add-button">Add</button>
+            </form>
+        </header>
+
+        <main>
+            <section class="filter_and_option">
+                <h1 class="todo_title">Your Todos</h1>
+                <h2 class="section_title">Filter & Options</h2>
+                <form action="" id="filter_and_options">
+                    <div class="radio-wrapper">
+                        <span class="radios">
+                            <input type="radio" name="todo" id="all" value="all"> <label for="all">All</label>
+                        </span>
+                        <span class="radios radio-open">
+                            <input type="radio" name="todo" id="open" value="open"> <label for="open">Open</label>
+                        </span>
+                        <span class="radios radio-done">
+                            <input type="radio" name="todo" id="done" value="done"><label for="done">Done</label>
+
+
+                        </span>
+                    </div>
+                    <div class="button-wrapper">
+                        <button id="remove_button" class="delete-btn">Remove Done Todos</button>
+                    </div>
+                </form>
+            </section>
+            <section class="active_todos">
+
+                <ul id="todo_list">
+                    <li>hallo</li>
+                </ul>
+            </section>
+
+
+        </main>
+        <footer></footer>
+    </section>
+
+    <script src="script4.js"></script>
+</body>
+
+</html>
