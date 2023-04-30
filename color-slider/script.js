@@ -24,41 +24,24 @@ function rangeValue(value) {
 
 document.body.addEventListener("input", rgbColors);
 
-//----erster Code----------//
-//----mit 3 p HTML lementen-------//
+//===============================================================//
+// Random Button //
+randomBtn = document.getElementById("random_button");
 
-// const red = document.querySelector("#red");
-// // const outputR = document.querySelector(".red_value");
+randomBtn.addEventListener("click", randomColor);
 
-// const green = document.querySelector("#green");
-// // const outputG = document.querySelector(".green_value");
-
-// const blue = document.querySelector("#blue");
-// // const outputB = document.querySelector(".blue_value");
-
-// red.addEventListener("input", function () {
-//   outputR.innerHTML = this.value;
-// });
-
-// green.addEventListener("input", function () {
-//   outputG.innerHTML = this.value;
-// });
-
-// blue.addEventListener("input", function () {
-//   outputB.innerHTML = this.value;
-// });
-
-// document.body.style.backgroundColor = "rgb(255,105,180)"; //standartfarb body
-// function rgbColors() {
-//   let redC = document.getElementById("red").value.charCodeAt();
-//   let greenC = document.getElementById("green").value;
-//   let blueC = document.getElementById("blue").value;
-//   let color = "rgb(" + redC + "," + greenC + "," + blueC + ")";
-
-//   document.body.style.backgroundColor = color;
-//   document.getElementById("range_slider").value = color;
-// }
-
-// document.getElementById("red").addEventListener("input", rgbColors);
-// document.getElementById("green").addEventListener("input", rgbColors);
-// document.getElementById("blue").addEventListener("input", rgbColors);
+function randomColor() {
+  fetch("https://dummy-apis.netlify.app/api/color")
+    .then((response) => response.json())
+    .then((data) => {
+      let newColor = [];
+      let hexValue = [];
+      for (const [key, value] of Object.entries(data.rgb)) {
+        newColor.push(`${value}`);
+        hexValue.push(data.color);
+      }
+      document.body.style.backgroundColor = "rgb(" + newColor.toString() + ")";
+      bgValue.innerText = hexValue[0];
+      console.log(hexValue);
+    });
+}
